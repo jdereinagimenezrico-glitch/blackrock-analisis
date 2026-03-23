@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlackRock — Infografía Integral 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#02020a; --deep:#06060f; --surf:#0d0e1c; --s2:#121320; --s3:#181926;
+  --gold:#c9a84c; --gold2:rgba(201,168,76,.14); --goldg:rgba(201,168,76,.5);
+  --red:#b83030; --red2:rgba(184,48,48,.14);
+  --cyan:#3bbfbf; --cyan2:rgba(59,191,191,.12);
+  --purple:#8b5cf6; --pur2:rgba(139,92,246,.14);
+  --donut-dash:376.99;
+  --white:#f0f0f0; --w95:rgba(240,240,240,.95); --w80:rgba(240,240,240,.80);
+  --w55:rgba(240,240,240,.55); --w30:rgba(240,240,240,.30); --w15:rgba(240,240,240,.15);
+  --border:rgba(255,255,255,.08); --b2:rgba(255,255,255,.14);
+  --fd:'Syne',sans-serif; --fm:'Space Mono',monospace; --fp:'Playfair Display',serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--fm);overflow-x:hidden;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.02;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px}
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 80%)}
+
+.page{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 32px 80px}
+
+/* SECTION HEADER */
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;margin-top:52px}
+.sh-num{font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.sh-title{font-family:var(--fd);font-weight:800;font-size:clamp(17px,2.4vw,28px);line-height:1;letter-spacing:-.03em;color:var(--w95)}
+.sh-rule{flex:1;height:1px;background:linear-gradient(to right,var(--b2),transparent)}
+.sh-sub{font-size:8px;letter-spacing:.12em;color:var(--w30);white-space:nowrap}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.rv.show{opacity:1;transform:translateY(0)}
+
+/* ════════════════════════════════════
+   HEADER
+════════════════════════════════════ */
+.hdr{padding:52px 0 28px;display:grid;grid-template-columns:1fr auto;align-items:end;border-bottom:1px solid var(--b2)}
+.hdr-tag{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+.hdr-title{font-family:var(--fd);font-weight:800;font-size:clamp(46px,7vw,90px);line-height:.88;letter-spacing:-.04em;color:var(--w95)}
+.hdr-title em{color:var(--gold);font-style:normal}
+.hdr-claim{margin-top:14px;font-family:var(--fp);font-style:italic;font-size:clamp(13px,1.7vw,19px);color:var(--w55);line-height:1.4}
+.hdr-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.hdr-meta{font-size:8px;letter-spacing:.16em;color:var(--w30);text-transform:uppercase;line-height:2}
+.hdr-meta strong{color:var(--gold)}
+.hdr-badge{display:inline-block;border:1px solid rgba(201,168,76,.4);padding:5px 13px;font-size:8px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-top:6px}
+.rainbow-bar{height:2px;background:linear-gradient(to right,var(--gold),var(--cyan),var(--gold));margin-top:-1px}
+
+/* ════════════════════════════════════
+   01 · ADP
+════════════════════════════════════ */
+.adp{display:grid;grid-template-columns:1fr 52px 1fr 52px 1fr;gap:0}
+.adp-col{background:var(--surf);display:flex;flex-direction:column}
+.adp-ph{padding:18px 20px 12px;border-bottom:1px solid var(--border)}
+.adp-ph-tag{font-size:8px;letter-spacing:.26em;text-transform:uppercase;display:block;margin-bottom:7px}
+.adp-ph-tag.a{color:rgba(180,80,80,.9)} .adp-ph-tag.p{color:var(--gold)} .adp-ph-tag.d{color:var(--cyan)}
+.adp-ph-title{font-family:var(--fd);font-weight:800;font-size:clamp(14px,1.8vw,20px);color:var(--w95);line-height:1;letter-spacing:-.02em}
+.adp-body{padding:14px 20px;flex:1}
+.adp-q{font-family:var(--fp);font-style:italic;font-size:clamp(10px,1.1vw,13px);color:var(--w80);line-height:1.6;border-left:2px solid;padding-left:11px;margin-bottom:13px}
+.adp-q.a{border-color:rgba(180,80,80,.6)} .adp-q.p{border-color:var(--gold)} .adp-q.d{border-color:var(--cyan)}
+.adp-items{display:flex;flex-direction:column;gap:5px}
+.adp-item{display:flex;align-items:flex-start;gap:7px;font-size:8px;color:var(--w55);line-height:1.5;letter-spacing:.02em}
+.adp-item::before{content:'—';color:var(--gold);opacity:.5;flex-shrink:0;margin-top:1px}
+.adp-stat{padding:12px 20px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:2px}
+.adp-sn{font-family:var(--fd);font-weight:800;font-size:clamp(18px,2.2vw,26px);letter-spacing:-.03em}
+.adp-sn.r{color:rgba(200,100,100,.9)} .adp-sn.g{color:var(--gold)} .adp-sn.c{color:var(--cyan)}
+.adp-sl{font-size:7px;letter-spacing:.1em;color:var(--w30)}
+.adp-arr{display:flex;align-items:center;justify-content:center;position:relative}
+.adp-arr::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(to right,var(--b2),var(--goldg),var(--b2));transform:translateY(-50%)}
+.adp-arr-i{background:var(--black);color:var(--gold);font-size:13px;z-index:1;padding:0 3px}
+.adp-bridge{background:var(--s2);border-top:2px solid var(--gold);align-items:center;justify-content:center;text-align:center;padding:24px 14px}
+.br-logo{font-family:var(--fd);font-weight:800;font-size:clamp(20px,2.8vw,34px);letter-spacing:-.03em;color:var(--w95)}
+.br-logo em{color:var(--gold);font-style:normal}
+.br-rule{width:38px;height:1px;background:var(--gold);margin:10px auto}
+.br-yr{font-size:9px;letter-spacing:.16em;color:var(--gold)}
+.br-names{margin-top:12px;display:flex;flex-direction:column;gap:3px}
+.br-name{font-family:var(--fd);font-size:8px;font-weight:700;color:var(--w55);letter-spacing:.03em}
+.br-name.pri{color:var(--w95);font-size:10px}
+.br-prods{margin-top:12px;display:flex;flex-direction:column;gap:4px}
+
+/* ════════════════════════════════════
+   02 · DATOS MACRO
+════════════════════════════════════ */
+.macro4{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:2px}
+.mc{background:var(--surf);padding:22px 18px;position:relative;overflow:hidden;transition:background .2s}
+.mc:hover{background:var(--s2)}
+.mc.hl{border-top:2px solid var(--gold)}
+.mc-lbl{font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--w30);margin-bottom:9px;display:block}
+.mc-n{font-family:var(--fd);font-weight:800;font-size:clamp(26px,3.8vw,48px);line-height:1;letter-spacing:-.04em;color:var(--gold)}
+.mc-n.w{color:var(--w95)}
+.mc-d{font-size:8px;color:var(--w55);margin-top:7px;line-height:1.55}
+.mc-bar{height:2px;background:var(--border);margin-top:11px}
+.mc-fill{height:100%;background:var(--gold);transition:width 1.4s cubic-bezier(.16,1,.3,1)}
+.macro-bot{background:var(--s2);display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--b2)}
+.mb{padding:12px 18px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:2px}
+.mb:last-child{border-right:none}
+.mb-n{font-family:var(--fd);font-weight:800;font-size:18px;color:var(--w95);letter-spacing:-.03em}
+.mb-l{font-size:7px;color:var(--w30);letter-spacing:.1em}
+
+/* ════════════════════════════════════
+   03 · EVOLUCIÓN AUM
+════════════════════════════════════ */
+.aum-chart{background:var(--surf);padding:28px 32px;position:relative}
+.aum-chart-inner{display:flex;align-items:flex-end;gap:10px;height:160px;padding-top:20px}
+.aum-bar-wrap{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+.aum-bar{width:100%;background:var(--gold2);border-top:2px solid var(--gold);position:relative;transition:height 1.2s cubic-bezier(.16,1,.3,1);cursor:default}
+.aum-bar:hover{background:rgba(201,168,76,.25)}
+.aum-bar-val{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-family:var(--fd);font-weight:800;font-size:9px;color:var(--gold);white-space:nowrap}
+.aum-bar-yr{font-size:7px;letter-spacing:.08em;color:var(--w30);text-align:center}
+.aum-note{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.aum-note-l{font-size:8px;color:var(--w30);letter-spacing:.1em}
+.aum-note-r{font-family:var(--fd);font-weight:800;font-size:22px;color:var(--gold)}
+
+/* ════════════════════════════════════
+   04 · CRONOLOGÍA
+════════════════════════════════════ */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.tl-card{background:var(--surf);padding:16px 14px;position:relative;transition:background .2s;cursor:default}
+.tl-card:hover{background:var(--s2)}
+.tl-card.key{border-top:2px solid var(--gold)}
+.tl-yr{font-family:var(--fd);font-weight:800;font-size:22px;letter-spacing:-.03em;color:var(--gold);margin-bottom:6px}
+.tl-tag{font-size:7px;letter-spacing:.16em;text-transform:uppercase;color:var(--w30);margin-bottom:6px;display:block}
+.tl-title{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95);margin-bottom:5px;line-height:1.2}
+.tl-body{font-size:8px;color:var(--w55);line-height:1.55}
+.tl-badge{display:inline-block;margin-top:8px;padding:2px 7px;font-size:7px;letter-spacing:.1em;text-transform:uppercase}
+.tl-badge.m{background:var(--gold2);color:var(--gold)}
+.tl-badge.s{background:var(--cyan2);color:var(--cyan)}
+.tl-badge.r{background:var(--red2);color:rgba(220,120,120,.9)}
+.tl-badge.p{background:var(--pur2);color:var(--purple)}
+
+/* ════════════════════════════════════
+   05 · ÓRGANOS
+════════════════════════════════════ */
+.organs5{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+.oc{background:var(--surf);border-top:2px solid var(--border);padding:18px 14px 14px;display:flex;flex-direction:column;gap:9px;transition:all .2s;cursor:default}
+.oc:hover{background:var(--s2);border-top-color:var(--gold)}
+.oc-ico{font-size:20px}
+.oc-tag{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.oc-title{font-family:var(--fd);font-weight:800;font-size:clamp(12px,1.4vw,17px);color:var(--w95);line-height:1;letter-spacing:-.02em}
+.oc-desc{font-size:8px;color:var(--w55);line-height:1.6;flex:1}
+.oc-stats{display:flex;flex-direction:column;gap:3px;border-top:1px solid var(--border);padding-top:9px}
+.oc-row{display:flex;justify-content:space-between;align-items:baseline}
+.oc-sn{font-family:var(--fd);font-weight:800;font-size:12px;color:var(--gold)}
+.oc-sl{font-size:6px;color:var(--w30);letter-spacing:.07em;text-align:right;max-width:55%}
+.loop-strip{display:flex;align-items:center;background:var(--surf);padding:14px 22px;margin-top:2px;gap:0}
+.ln{flex:1;text-align:center;padding:6px 3px;cursor:default}
+.ln-i{font-size:15px;display:block;margin-bottom:4px}
+.ln-l{font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--w55)}
+.larr{color:var(--gold);font-size:9px;opacity:.45;animation:ap 2s ease-in-out infinite;flex-shrink:0}
+.larr.b{color:var(--cyan)}
+@keyframes ap{0%,100%{opacity:.3;transform:translateX(0)}50%{opacity:.9;transform:translateX(2px)}}
+
+/* ════════════════════════════════════
+   06 · COMPETIDORES
+════════════════════════════════════ */
+.comp-layout{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.comp-table{background:var(--surf)}
+.comp-thead{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:0;border-bottom:2px solid var(--gold);padding:10px 18px}
+.comp-th{font-size:7px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.comp-th:first-child{color:var(--w30)}
+.comp-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:0;padding:10px 18px;border-bottom:1px solid var(--border);transition:background .18s}
+.comp-row:last-child{border-bottom:none}
+.comp-row:hover{background:var(--s2)}
+.comp-row.br{background:var(--s2);border-left:2px solid var(--gold)}
+.comp-cell{font-size:9px;color:var(--w55);display:flex;align-items:center}
+.comp-cell.name{font-family:var(--fd);font-weight:700;color:var(--w95);font-size:10px}
+.comp-cell.br-cell{color:var(--gold);font-weight:700}
+.comp-cell.hi{color:var(--cyan)}
+.comp-bar-wrap{background:var(--surf);padding:20px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.cb-row{display:flex;align-items:center;gap:12px}
+.cb-name{font-family:var(--fd);font-size:10px;font-weight:700;color:var(--w95);min-width:80px}
+.cb-track{flex:1;height:6px;background:var(--border);position:relative;border-radius:1px}
+.cb-fill{height:100%;border-radius:1px;transition:width 1.4s cubic-bezier(.16,1,.3,1)}
+.cb-val{font-family:var(--fd);font-size:10px;font-weight:800;min-width:44px;text-align:right}
+
+/* ════════════════════════════════════
+   07 · MODELO DE NEGOCIO
+════════════════════════════════════ */
+.modelo{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 190px;gap:2px}
+.md-card{background:var(--surf);padding:18px 16px;border-top:2px solid var(--border);transition:all .2s}
+.md-card:hover{background:var(--s2);border-top-color:var(--gold)}
+.md-ico{font-size:19px;margin-bottom:10px;display:block}
+.md-name{font-family:var(--fd);font-weight:700;font-size:clamp(10px,1.2vw,14px);color:var(--w95);margin-bottom:5px}
+.md-amt{font-family:var(--fm);font-weight:700;font-size:clamp(13px,1.7vw,19px);color:var(--gold);margin-bottom:6px}
+.md-desc{font-size:8px;color:var(--w55);line-height:1.6}
+.md-total{background:var(--s2);border-top:2px solid var(--gold);padding:18px 16px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.mdt-lbl{font-size:7px;letter-spacing:.14em;color:var(--w30);text-transform:uppercase}
+.mdt-n{font-family:var(--fd);font-weight:800;font-size:clamp(22px,2.8vw,36px);color:var(--w95);letter-spacing:-.04em;line-height:1}
+.mdt-n em{color:var(--gold);font-style:normal}
+.mdt-g{font-size:10px;color:var(--cyan);display:flex;align-items:center;gap:4px}
+
+/* ════════════════════════════════════
+   08 · STP
+════════════════════════════════════ */
+.stp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-bottom:2px}
+.stp-card{background:var(--surf);padding:20px 18px}
+.stp-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.stp-letter{font-family:var(--fd);font-weight:800;font-size:36px;letter-spacing:-.04em;line-height:1}
+.stp-letter.s{color:var(--gold)}
+.stp-letter.t1{color:var(--cyan)}
+.stp-letter.p{color:var(--purple)}
+.stp-word{display:flex;flex-direction:column;gap:2px}
+.stp-word-main{font-family:var(--fd);font-weight:700;font-size:14px;color:var(--w95)}
+.stp-word-sub{font-size:7px;letter-spacing:.16em;text-transform:uppercase;color:var(--w30)}
+.stp-items{display:flex;flex-direction:column;gap:7px}
+.stp-item{padding:9px 12px;background:var(--s2);border-left:2px solid var(--border)}
+.stp-item.hl{border-left-color:var(--gold)}
+.stp-item-head{font-family:var(--fd);font-size:10px;font-weight:700;color:var(--w95);margin-bottom:3px}
+.stp-item-body{font-size:8px;color:var(--w55);line-height:1.55}
+.brand-row{background:var(--surf);padding:18px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px}
+.brand-item{background:var(--s2);padding:14px 16px;border-top:2px solid var(--border);transition:border-color .2s}
+.brand-item:hover{border-top-color:var(--gold)}
+.brand-ico{font-size:18px;margin-bottom:8px;display:block}
+.brand-name{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95);margin-bottom:4px}
+.brand-desc{font-size:8px;color:var(--w55);line-height:1.55}
+
+/* ════════════════════════════════════
+   09 · ARQUITECTURA
+════════════════════════════════════ */
+.arch-layers{display:flex;flex-direction:column;gap:2px}
+.al{display:grid;grid-template-columns:130px 1fr;min-height:44px}
+.al-l{background:var(--s2);display:flex;flex-direction:column;justify-content:center;padding:8px 14px;border-right:2px solid var(--border)}
+.al-ln{font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:var(--w30)}
+.al-lt{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95);margin-top:2px}
+.al-c{background:var(--surf);display:flex;align-items:center;flex-wrap:wrap;padding:8px 14px;gap:5px}
+.al-tag{padding:3px 8px;background:var(--s2);border:1px solid var(--b2);font-size:7px;letter-spacing:.08em;text-transform:uppercase;color:var(--w30);transition:all .18s;cursor:default}
+.al-tag:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ════════════════════════════════════
+   10 · CLIENTES + MAPA
+════════════════════════════════════ */
+.clients-layout{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.clients-table{background:var(--surf);padding:22px}
+.clients-title{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.clients-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:10px}
+.cg-item{background:var(--s2);padding:10px 12px;border-left:2px solid var(--border);transition:border-color .18s}
+.cg-item:hover{border-left-color:var(--gold)}
+.cg-cat{font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:var(--w30);margin-bottom:3px}
+.cg-names{font-family:var(--fd);font-size:9px;color:var(--w95);line-height:1.5}
+.clients-proof{background:var(--gold2);border:1px solid rgba(201,168,76,.3);padding:10px 14px;text-align:center}
+.clients-proof-n{font-family:var(--fd);font-weight:800;font-size:22px;color:var(--gold)}
+.clients-proof-l{font-size:7px;letter-spacing:.12em;color:var(--w55);margin-top:2px}
+
+.map-panel{background:var(--surf);padding:22px;display:flex;flex-direction:column;gap:14px}
+.map-title{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block}
+.map-svg-wrap{flex:1;position:relative}
+.region-bars{display:flex;flex-direction:column;gap:6px;flex:1}
+.rb{display:flex;align-items:center;gap:10px}
+.rb-name{font-size:8px;letter-spacing:.08em;color:var(--w80);min-width:88px}
+.rb-track{flex:1;height:5px;background:var(--border)}
+.rb-fill{height:100%;background:var(--gold);transition:width 1.4s cubic-bezier(.16,1,.3,1)}
+.rb-val{font-family:var(--fd);font-size:9px;font-weight:700;color:var(--gold);min-width:30px;text-align:right}
+.map-total{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border)}
+.mt-l{font-size:7px;letter-spacing:.12em;color:var(--w30)}
+.mt-v{font-family:var(--fd);font-weight:800;font-size:16px;color:var(--w95)}
+
+/* ════════════════════════════════════
+   11 · NOTICIAS
+════════════════════════════════════ */
+.news-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:2px}
+.news-main{background:var(--surf);padding:26px;border-top:2px solid var(--red)}
+.nm-date{font-size:8px;letter-spacing:.16em;color:var(--gold);margin-bottom:8px;display:block}
+.nm-title{font-family:var(--fd);font-weight:800;font-size:clamp(14px,1.8vw,22px);line-height:1.1;color:var(--w95);margin-bottom:10px}
+.nm-body{font-size:9px;color:var(--w55);line-height:1.7}
+.news-side{display:flex;flex-direction:column;gap:2px}
+.ni{background:var(--surf);padding:12px 14px;flex:1;border-left:2px solid var(--border);transition:all .18s;cursor:default}
+.ni:hover{border-left-color:var(--gold);background:var(--s2)}
+.ni-date{font-size:7px;color:var(--w30);margin-bottom:4px}
+.ni-title{font-family:var(--fd);font-size:9px;font-weight:700;color:var(--w95);margin-bottom:4px;line-height:1.3}
+.ni-tag{display:inline-block;padding:2px 6px;font-size:7px;letter-spacing:.09em;text-transform:uppercase}
+.ni-tag.m{background:var(--gold2);color:var(--gold)}
+.ni-tag.t{background:var(--cyan2);color:var(--cyan)}
+.ni-tag.s{background:var(--pur2);color:var(--purple)}
+
+/* ════════════════════════════════════
+   12 · ORGANIGRAMA
+════════════════════════════════════ */
+.org-wrap{display:flex;flex-direction:column;align-items:center;gap:0}
+.org-row{display:flex;gap:4px;justify-content:center}
+.org-conn{height:18px;width:1px;background:linear-gradient(to bottom,var(--b2),transparent);margin:0 auto}
+.ocard{background:var(--surf);padding:10px 12px;text-align:center;border-top:2px solid var(--border);transition:all .18s;cursor:default;min-width:110px}
+.ocard:hover,.ocard.ceo{border-top-color:var(--gold);background:var(--s2)}
+.ocard.ceo .ocr{color:var(--gold)}
+.ocav{width:24px;height:24px;border-radius:50%;background:var(--s2);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:11px;border:1px solid var(--border)}
+.ocard.ceo .ocav{border-color:var(--gold)}
+.ocn{font-family:var(--fd);font-size:9px;font-weight:700;color:var(--w95)}
+.ocr{font-size:6px;letter-spacing:.09em;text-transform:uppercase;color:var(--w30);margin-top:1px}
+
+/* ════════════════════════════════════
+   FOOTER
+════════════════════════════════════ */
+.footer{margin-top:52px;border-top:1px solid var(--b2);padding-top:22px;display:flex;justify-content:space-between;align-items:center}
+.fl{font-family:var(--fd);font-weight:800;font-size:18px;letter-spacing:-.02em;color:var(--w95)}
+.fl em{color:var(--gold);font-style:normal}
+.fr{font-size:7px;letter-spacing:.13em;color:var(--w30);text-align:right;line-height:2}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ══ HEADER ══ -->
+<div class="hdr rv">
+  <div>
+    <span class="hdr-tag">Infografía Integral · Análisis Estratégico de Empresa · IEB · Grado ADE · Madrid</span>
+    <div class="hdr-title">Black<em>Rock</em></div>
+    <div class="hdr-claim">"Del caos a la excelencia — no es una empresa, es un sistema."</div>
+  </div>
+  <div class="hdr-right">
+    <div class="hdr-meta">NYSE: BLK<br>Fundada <strong>1988</strong> · Nueva York<br><strong>$14T</strong> AUM · Récord 2025<br>IEB Madrid · Grado ADE</div>
+    <div class="hdr-badge">2025</div>
+  </div>
+</div>
+<div class="rainbow-bar"></div>
+
+<!-- ══ 01 · ADP ══ -->
+<div class="sh rv"><span class="sh-num">01</span><span class="sh-title">Antes · Puente · Después</span><div class="sh-rule"></div><span class="sh-sub">El marco narrativo del análisis</span></div>
+<div class="adp rv">
+  <div class="adp-col">
+    <div class="adp-ph"><span class="adp-ph-tag a">Antes · 1970 – 1987</span><div class="adp-ph-title">El capital existía. Nadie veía el sistema.</div></div>
+    <div class="adp-body">
+      <div class="adp-q a">"Los mercados financieros eran poderosos pero ciegos. Nadie podía ver el riesgo sistémico."</div>
+      <div class="adp-items">
+        <div class="adp-item">Black Monday: Dow Jones −22.6% en un día · Oct 1987</div>
+        <div class="adp-item">Crisis S&amp;L: $160B en pérdidas para contribuyentes</div>
+        <div class="adp-item">+4.000 gestoras sin coordinación ni datos compartidos</div>
+        <div class="adp-item">Portfolios de bonos gestionados por intuición</div>
+        <div class="adp-item">Quiebra Continental Illinois · 1984</div>
+        <div class="adp-item">Capital allocation: spreadsheets y teléfono</div>
+      </div>
+    </div>
+    <div class="adp-stat"><div class="adp-sn r">−22.6%</div><div class="adp-sl">Black Monday · Oct 19, 1987</div></div>
+  </div>
+  <div class="adp-arr"><span class="adp-arr-i">▶</span></div>
+  <div class="adp-col adp-bridge">
+    <div class="br-logo">Black<em>Rock</em></div>
+    <div class="br-rule"></div>
+    <div class="br-yr">Nueva York · 1988</div>
+    <div class="br-names">
+      <div class="br-name pri">Larry Fink</div>
+      <div class="br-name">Robert Kapito</div>
+      <div class="br-name">Susan Wagner · Ben Golub</div>
+      <div class="br-name">+ 4 cofundadores</div>
+    </div>
+    <div class="br-prods">
+      <span style="font-size:10px;letter-spacing:.14em;color:var(--gold);font-weight:700">ALADDIN</span>
+      <span style="font-size:9px;letter-spacing:.1em;color:var(--cyan)">iShares · GIP · HPS</span>
+      <span style="font-size:8px;color:var(--w30)">$5M → $14T</span>
+    </div>
+  </div>
+  <div class="adp-arr"><span class="adp-arr-i">▶</span></div>
+  <div class="adp-col">
+    <div class="adp-ph"><span class="adp-ph-tag d">Después · 1988 – 2025</span><div class="adp-ph-title">El sistema se hizo visible.</div></div>
+    <div class="adp-body">
+      <div class="adp-q d">"No gestionamos activos. Gestionamos el sistema financiero global."<br><span style="font-size:7px;color:var(--w30);font-style:normal;letter-spacing:.08em">— Larry Fink</span></div>
+      <div class="adp-items">
+        <div class="adp-item">$14T en AUM — mayor gestora de la historia</div>
+        <div class="adp-item">Aladdin procesa $21T en activos externos</div>
+        <div class="adp-item">iShares: 32% del mercado global de ETFs</div>
+        <div class="adp-item">+1.500 instituciones en 100+ países</div>
+        <div class="adp-item">Bitcoin ETF IBIT: mayor del mundo</div>
+        <div class="adp-item">$24.2B ingresos 2025 — récord histórico</div>
+      </div>
+    </div>
+    <div class="adp-stat"><div class="adp-sn g">$14T</div><div class="adp-sl">AUM 2025 · Récord histórico</div></div>
+  </div>
+</div>
+
+<!-- ══ 02 · DATOS MACRO ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">02</span><span class="sh-title">Magnitud del Sistema</span><div class="sh-rule"></div><span class="sh-sub">Cifras que definen la escala</span></div>
+<div class="macro4 rv">
+  <div class="mc hl"><span class="mc-lbl">Activos bajo gestión</span><div class="mc-n">$14T</div><div class="mc-d">Más que el PIB de Alemania + RU + Francia juntos. El mayor AUM de la historia.</div><div class="mc-bar"><div class="mc-fill" data-w="85" style="width:0%"></div></div></div>
+  <div class="mc"><span class="mc-lbl">Procesado por Aladdin</span><div class="mc-n w">$21T</div><div class="mc-d">Sistema operativo del mercado global. 250M+ cálculos de riesgo semanales para 1.500+ instituciones.</div><div class="mc-bar"><div class="mc-fill" data-w="100" style="width:0%"></div></div></div>
+  <div class="mc"><span class="mc-lbl">iShares ETF platform</span><div class="mc-n">$5.5T</div><div class="mc-d">32% del mercado global. Adquirida por $300B en 2009. $527B en entradas netas 2025.</div><div class="mc-bar"><div class="mc-fill" data-w="40" style="width:0%"></div></div></div>
+  <div class="mc"><span class="mc-lbl">Ingresos 2025 — Récord</span><div class="mc-n">$24.2B</div><div class="mc-d">+19% interanual. Margen operativo 45%. Entradas netas $698B — all-time high.</div><div class="mc-bar"><div class="mc-fill" data-w="62" style="width:0%"></div></div></div>
+</div>
+<div class="macro-bot rv">
+  <div class="mb"><div class="mb-n">~23K</div><div class="mb-l">Empleados globales</div></div>
+  <div class="mb"><div class="mb-n">70</div><div class="mb-l">Oficinas mundiales</div></div>
+  <div class="mb"><div class="mb-n">30+</div><div class="mb-l">Países con presencia</div></div>
+  <div class="mb"><div class="mb-n">1988</div><div class="mb-l">Año de fundación</div></div>
+  <div class="mb"><div class="mb-n">$698B</div><div class="mb-l">Entradas netas 2025</div></div>
+</div>
+
+<!-- ══ 03 · EVOLUCIÓN AUM ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">03</span><span class="sh-title">Evolución del AUM</span><div class="sh-rule"></div><span class="sh-sub">1999 → 2025 · billones USD</span></div>
+<div class="aum-chart rv">
+  <div class="aum-chart-inner" id="aum-bars">
+    <!-- bars injected by JS -->
+  </div>
+  <div class="aum-note">
+    <span class="aum-note-l">Fuente: BlackRock Annual Reports · Datos en trillones USD</span>
+    <div style="display:flex;align-items:baseline;gap:8px">
+      <span style="font-size:8px;letter-spacing:.12em;color:var(--w30)">CAGR 1999–2025</span>
+      <span class="aum-note-r" style="font-size:18px">≈ 17% anual</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 04 · CRONOLOGÍA ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">04</span><span class="sh-title">Cronología de Hitos</span><div class="sh-rule"></div><span class="sh-sub">1988 → 2025 · los momentos que construyeron el sistema</span></div>
+<div class="timeline rv">
+  <div class="tl-card key"><div class="tl-yr">1988</div><span class="tl-tag">Origen</span><div class="tl-title">Fundación</div><div class="tl-body">Larry Fink y 7 socios fundan Blackstone Financial Management. Capital inicial: $5M. Obsesión central: gestionar el riesgo de bonos con modelos cuantitativos.</div><span class="tl-badge m">Fundación</span></div>
+  <div class="tl-card"><div class="tl-yr">1992</div><span class="tl-tag">Identidad</span><div class="tl-title">Nace BlackRock Inc.</div><div class="tl-body">Separación de Blackstone. La compañía adopta su nombre definitivo e identidad propia. Primeras oficinas fuera de Nueva York.</div><span class="tl-badge s">Escisión</span></div>
+  <div class="tl-card"><div class="tl-yr">1999</div><span class="tl-tag">Mercados</span><div class="tl-title">IPO en NYSE</div><div class="tl-body">Sale a bolsa con $165B en AUM. La marca comienza a ser reconocida institucionalmente. Ticker: BLK.</div><span class="tl-badge m">IPO</span></div>
+  <div class="tl-card key"><div class="tl-yr">2006</div><span class="tl-tag">Crecimiento</span><div class="tl-title">Fusión Merrill Lynch IM</div><div class="tl-body">Primera gran adquisición transformadora. AUM supera $1 billón de dólares por primera vez. BlackRock entra en el top 3 mundial.</div><span class="tl-badge m">M&amp;A</span></div>
+  <div class="tl-card key"><div class="tl-yr">2009</div><span class="tl-tag">Dominancia</span><div class="tl-title">BGI + iShares · $13.5B</div><div class="tl-body">Adquisición de Barclays Global Investors. iShares entra al sistema. BlackRock se convierte en la mayor gestora del mundo con $3T en AUM.</div><span class="tl-badge m">Transformación</span></div>
+  <div class="tl-card"><div class="tl-yr">2015</div><span class="tl-tag">Influencia</span><div class="tl-title">Cartas anuales de Fink</div><div class="tl-body">Comienza a publicar cartas a CEOs mundiales sobre propósito corporativo, ESG y largo plazo. BlackRock ejerce influencia política y corporativa global.</div><span class="tl-badge p">Soft Power</span></div>
+  <div class="tl-card key"><div class="tl-yr">2024</div><span class="tl-tag">Expansión</span><div class="tl-title">GIP + Bitcoin ETF</div><div class="tl-body">Adquiere Global Infrastructure Partners por $12.5B. Lanza IBIT, el mayor ETF de Bitcoin del mundo. Entrada en activos reales e infraestructura.</div><span class="tl-badge m">M&amp;A · Crypto</span></div>
+  <div class="tl-card key"><div class="tl-yr">2025</div><span class="tl-tag">Récord</span><div class="tl-title">$14T AUM · HPS</div><div class="tl-body">Adquisición de HPS Investment Partners (~$220B crédito privado). AUM récord $14T. Ingresos $24.2B. Entradas netas $698B. All-time highs en todo.</div><span class="tl-badge s">Récord</span></div>
+</div>
+
+<!-- ══ 05 · ÓRGANOS ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">05</span><span class="sh-title">Los 5 Órganos del Sistema</span><div class="sh-rule"></div><span class="sh-sub">Cada componente potencia al resto</span></div>
+<div class="organs5 rv">
+  <div class="oc" style="border-top-color:var(--gold)"><div class="oc-ico">🧠</div><div class="oc-tag">Inteligencia</div><div class="oc-title">Aladdin</div><div class="oc-desc">Sistema operativo del mercado global. Procesa riesgo en tiempo real para 1.500+ instituciones. Asset, Liability, Debt &amp; Derivative Investment Network.</div><div class="oc-stats"><div class="oc-row"><span class="oc-sn">$21T</span><span class="oc-sl">Activos procesados</span></div><div class="oc-row"><span class="oc-sn">250M+</span><span class="oc-sl">Cálculos riesgo/sem.</span></div><div class="oc-row"><span class="oc-sn">$1.6B+</span><span class="oc-sl">Revenue SaaS anual</span></div></div></div>
+  <div class="oc"><div class="oc-ico">📊</div><div class="oc-tag">Distribución</div><div class="oc-title">iShares</div><div class="oc-desc">La mayor plataforma ETF del mundo. Convierte señales de Aladdin en productos accesibles para cualquier inversor del planeta.</div><div class="oc-stats"><div class="oc-row"><span class="oc-sn">$5.5T</span><span class="oc-sl">AUM</span></div><div class="oc-row"><span class="oc-sn">32%</span><span class="oc-sl">Cuota global ETF</span></div><div class="oc-row"><span class="oc-sn">$527B</span><span class="oc-sl">Entradas netas 2025</span></div></div></div>
+  <div class="oc"><div class="oc-ico">🏗️</div><div class="oc-tag">Rendimiento</div><div class="oc-title">Mercados Privados</div><div class="oc-desc">GIP (infraestructura), HPS (crédito privado), private equity y real assets. Mayor margen que cualquier producto líquido.</div><div class="oc-stats"><div class="oc-row"><span class="oc-sn">$220B+</span><span class="oc-sl">HPS Credit AUM</span></div><div class="oc-row"><span class="oc-sn">$12.5B</span><span class="oc-sl">Precio adq. GIP</span></div><div class="oc-row"><span class="oc-sn">↑ Alto</span><span class="oc-sl">Margen relativo</span></div></div></div>
+  <div class="oc"><div class="oc-ico">🗄️</div><div class="oc-tag">Datos</div><div class="oc-title">Preqin</div><div class="oc-desc">Mayor base de datos del mundo sobre PE, hedge funds e infraestructura. Integrada en Aladdin. BlackRock como árbitro de la información privada.</div><div class="oc-stats"><div class="oc-row"><span class="oc-sn">$60M+</span><span class="oc-sl">Revenue trimestral</span></div><div class="oc-row"><span class="oc-sn">Global</span><span class="oc-sl">Cobertura PE</span></div><div class="oc-row"><span class="oc-sn">Único</span><span class="oc-sl">Posicionamiento</span></div></div></div>
+  <div class="oc"><div class="oc-ico">🤝</div><div class="oc-tag">Integración</div><div class="oc-title">Advisory</div><div class="oc-desc">Asesora a gobiernos y bancos centrales. Integra a los clientes más poderosos del mundo en el ecosistema BlackRock de forma permanente.</div><div class="oc-stats"><div class="oc-row"><span class="oc-sn">Gov.</span><span class="oc-sl">Asesoría estatal</span></div><div class="oc-row"><span class="oc-sn">FED+</span><span class="oc-sl">Mandatos BC</span></div><div class="oc-row"><span class="oc-sn">Sistémica</span><span class="oc-sl">Integración cliente</span></div></div></div>
+</div>
+<div class="loop-strip rv">
+  <div class="ln"><span class="ln-i">⚡</span><span class="ln-l">Datos</span></div><span class="larr">▶</span>
+  <div class="ln"><span class="ln-i">🧠</span><span class="ln-l">Decisión</span></div><span class="larr">▶</span>
+  <div class="ln"><span class="ln-i">📦</span><span class="ln-l">Producto</span></div><span class="larr">▶</span>
+  <div class="ln"><span class="ln-i">🌐</span><span class="ln-l">Distribución</span></div><span class="larr">▶</span>
+  <div class="ln"><span class="ln-i">👤</span><span class="ln-l">Cliente</span></div><span class="larr b">↺</span>
+  <div class="ln" style="color:var(--gold)"><span class="ln-i">🔄</span><span class="ln-l" style="color:var(--gold)">Retroalim.</span></div>
+  <div style="flex:1;height:1px;background:linear-gradient(to right,var(--border),transparent);align-self:center;margin:0 14px"></div>
+  <div style="font-size:7px;letter-spacing:.12em;color:var(--w30);text-align:right;line-height:1.9">El circuito cerrado:<br><span style="color:var(--gold)">cada decisión genera inteligencia<br>que mejora la siguiente.</span></div>
+</div>
+
+<!-- ══ 06 · COMPARATIVA COMPETIDORES ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">06</span><span class="sh-title">Comparativa con Competidores</span><div class="sh-rule"></div><span class="sh-sub">BlackRock vs. industria · 2024–2025</span></div>
+<div class="comp-layout rv">
+  <div class="comp-table">
+    <div class="comp-thead">
+      <span class="comp-th">Gestora</span>
+      <span class="comp-th">AUM</span>
+      <span class="comp-th">Ingresos</span>
+      <span class="comp-th">ETF market</span>
+      <span class="comp-th">Ventaja</span>
+    </div>
+    <div class="comp-row br">
+      <span class="comp-cell name br-cell">BlackRock</span>
+      <span class="comp-cell br-cell">$14T</span>
+      <span class="comp-cell br-cell">$24.2B</span>
+      <span class="comp-cell br-cell">32%</span>
+      <span class="comp-cell br-cell">Sistema integral</span>
+    </div>
+    <div class="comp-row">
+      <span class="comp-cell name">Vanguard</span>
+      <span class="comp-cell">$9.3T</span>
+      <span class="comp-cell">~$7B</span>
+      <span class="comp-cell">26%</span>
+      <span class="comp-cell" style="font-size:8px">Bajo coste / mutual</span>
+    </div>
+    <div class="comp-row">
+      <span class="comp-cell name">Fidelity</span>
+      <span class="comp-cell">$5.4T</span>
+      <span class="comp-cell">~$26B*</span>
+      <span class="comp-cell">~4%</span>
+      <span class="comp-cell" style="font-size:8px">Retail / 401k</span>
+    </div>
+    <div class="comp-row">
+      <span class="comp-cell name">State Street</span>
+      <span class="comp-cell">$4.4T</span>
+      <span class="comp-cell">$12.1B</span>
+      <span class="comp-cell">15%</span>
+      <span class="comp-cell" style="font-size:8px">Custodia / SPDR</span>
+    </div>
+    <div class="comp-row">
+      <span class="comp-cell name">J.P. Morgan AM</span>
+      <span class="comp-cell">$3.4T</span>
+      <span class="comp-cell">~$20B*</span>
+      <span class="comp-cell">&lt;3%</span>
+      <span class="comp-cell" style="font-size:8px">Banca privada</span>
+    </div>
+    <div style="padding:8px 18px;font-size:7px;color:var(--w30);border-top:1px solid var(--border)">* Ingresos totales grupo bancario. Datos 2024–2025. Fuentes: Annual Reports, Bloomberg.</div>
+  </div>
+
+  <div class="comp-bar-wrap">
+    <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">AUM · Billones USD</div>
+    <div class="cb-row"><span class="cb-name">BlackRock</span><div class="cb-track"><div class="cb-fill" style="width:0%;background:var(--gold)" data-w="100"></div></div><span class="cb-val" style="color:var(--gold)">$14T</span></div>
+    <div class="cb-row"><span class="cb-name">Vanguard</span><div class="cb-track"><div class="cb-fill" style="width:0%;background:var(--w30)" data-w="66"></div></div><span class="cb-val" style="color:var(--w55)">$9.3T</span></div>
+    <div class="cb-row"><span class="cb-name">Fidelity</span><div class="cb-track"><div class="cb-fill" style="width:0%;background:var(--w30)" data-w="39"></div></div><span class="cb-val" style="color:var(--w55)">$5.4T</span></div>
+    <div class="cb-row"><span class="cb-name">State Street</span><div class="cb-track"><div class="cb-fill" style="width:0%;background:var(--w30)" data-w="31"></div></div><span class="cb-val" style="color:var(--w55)">$4.4T</span></div>
+    <div class="cb-row"><span class="cb-name">JPMorgan AM</span><div class="cb-track"><div class="cb-fill" style="width:0%;background:var(--w30)" data-w="24"></div></div><span class="cb-val" style="color:var(--w55)">$3.4T</span></div>
+    <div style="padding-top:12px;border-top:1px solid var(--border);font-size:8px;color:var(--w30);line-height:1.8">
+      BlackRock gestiona <span style="color:var(--gold);font-weight:700">50% más</span> que Vanguard<br>
+      y <span style="color:var(--gold);font-weight:700">3× más</span> que State Street.<br>
+      Su ventaja real: <span style="color:var(--cyan)">Aladdin es insustituible.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 07 · MODELO DE NEGOCIO ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">07</span><span class="sh-title">Modelo de Negocio</span><div class="sh-rule"></div><span class="sh-sub">Cuatro fuentes de ingresos · $24.2B total 2025</span></div>
+<div class="modelo rv">
+  <div class="md-card" style="border-top-color:var(--gold)"><span class="md-ico">📊</span><div class="md-name">Gestión de Activos</div><div class="md-amt">~$15B</div><div class="md-desc">Comisiones sobre $14T en AUM. Gestión activa, indexada y multi-activo. Core histórico e inamovible del negocio.</div></div>
+  <div class="md-card"><span class="md-ico">💻</span><div class="md-name">Aladdin SaaS</div><div class="md-amt">$1.6B+</div><div class="md-desc">Ingresos recurrentes por suscripción. +16% YoY. Margen altísimo. 1.500+ instituciones pagan por el sistema operativo de BlackRock.</div></div>
+  <div class="md-card"><span class="md-ico">🏗️</span><div class="md-name">Mercados Privados</div><div class="md-amt">↑ 15%</div><div class="md-desc">Mayor margen del negocio. GIP · HPS · Private Equity · Real Assets. La apuesta estratégica para la próxima década.</div></div>
+  <div class="md-card"><span class="md-ico">🤝</span><div class="md-name">Advisory</div><div class="md-amt">Estratégico</div><div class="md-desc">Gobiernos y bancos centrales. No solo honorarios: integra clientes en el ecosistema de forma estructural y permanente.</div></div>
+  <div class="md-total"><div class="mdt-lbl">Ingresos Totales 2025</div><div class="mdt-n">$24.2<em>B</em></div><div class="mdt-g">▲ +19% YoY</div><div style="margin-top:6px;font-size:7px;letter-spacing:.1em;color:var(--w30);line-height:1.9">Récord histórico<br>Margen op. 45%<br>NYSE: BLK</div></div>
+</div>
+
+<!-- ══ 08 · ANATOMÍA FINANCIERA ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">08</span><span class="sh-title">Anatomía Financiera Interna</span><div class="sh-rule"></div><span class="sh-sub">Desglose de ingresos · márgenes · cuotas internas · $24.2B total 2025</span></div>
+
+<!-- ROW 1: Donut + Revenue breakdown bars -->
+<div style="display:grid;grid-template-columns:260px 1fr;gap:2px;margin-bottom:2px" class="rv">
+
+  <!-- Donut chart via SVG -->
+  <div style="background:var(--surf);padding:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+    <div style="font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-align:center">Distribución de ingresos 2025</div>
+    <div style="position:relative;width:160px;height:160px">
+      <svg viewBox="0 0 160 160" style="width:160px;height:160px;transform:rotate(-90deg)">
+        <!-- Base circle -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="var(--border)" stroke-width="22"/>
+        <!-- Gestión activos 62% → stroke-dasharray = 62% of 376.99 = 233.7 -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#c9a84c" stroke-width="22"
+          stroke-dasharray="233.7 376.99" stroke-dashoffset="0" class="donut-seg" data-val="233.7"/>
+        <!-- iShares fees ~18% → 67.9, offset -233.7 -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#3bbfbf" stroke-width="22"
+          stroke-dasharray="67.9 376.99" stroke-dashoffset="-233.7" class="donut-seg" data-val="67.9" data-off="-233.7"/>
+        <!-- Aladdin 7% → 26.4, offset -301.6 -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#8b5cf6" stroke-width="22"
+          stroke-dasharray="26.4 376.99" stroke-dashoffset="-301.6" class="donut-seg" data-val="26.4" data-off="-301.6"/>
+        <!-- Mercados privados 8% → 30.2, offset -328 -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="#e06060" stroke-width="22"
+          stroke-dasharray="30.2 376.99" stroke-dashoffset="-328.0" class="donut-seg" data-val="30.2" data-off="-328.0"/>
+        <!-- Advisory ~5% → 18.8, offset -358.2 -->
+        <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(240,240,240,.25)" stroke-width="22"
+          stroke-dasharray="18.8 376.99" stroke-dashoffset="-358.2"/>
+      </svg>
+      <!-- Center label -->
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center">
+        <div style="font-family:var(--fd);font-weight:800;font-size:20px;color:var(--w95);line-height:1">$24.2B</div>
+        <div style="font-size:7px;letter-spacing:.1em;color:var(--w30);margin-top:2px">Total 2025</div>
+      </div>
+    </div>
+    <!-- Legend -->
+    <div style="display:flex;flex-direction:column;gap:5px;width:100%">
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:10px;height:10px;background:#c9a84c;border-radius:1px;flex-shrink:0"></div><span style="font-size:8px;color:var(--w80)">Gestión Activos</span><span style="font-size:8px;color:var(--gold);margin-left:auto;font-weight:700">62%</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:10px;height:10px;background:#3bbfbf;border-radius:1px;flex-shrink:0"></div><span style="font-size:8px;color:var(--w80)">Fees iShares</span><span style="font-size:8px;color:var(--cyan);margin-left:auto;font-weight:700">18%</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:10px;height:10px;background:#8b5cf6;border-radius:1px;flex-shrink:0"></div><span style="font-size:8px;color:var(--w80)">Aladdin SaaS</span><span style="font-size:8px;color:#a78bfa;margin-left:auto;font-weight:700">7%</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:10px;height:10px;background:#e06060;border-radius:1px;flex-shrink:0"></div><span style="font-size:8px;color:var(--w80)">Mercados Privados</span><span style="font-size:8px;color:#e08080;margin-left:auto;font-weight:700">8%</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:10px;height:10px;background:rgba(240,240,240,.25);border-radius:1px;flex-shrink:0"></div><span style="font-size:8px;color:var(--w80)">Advisory + Otros</span><span style="font-size:8px;color:var(--w55);margin-left:auto;font-weight:700">5%</span></div>
+    </div>
+  </div>
+
+  <!-- Revenue bars detailed -->
+  <div style="background:var(--surf);padding:22px 24px;display:flex;flex-direction:column;gap:14px">
+    <div style="font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2px">Desglose por línea · valor absoluto y % del total</div>
+
+    <!-- Gestión activos -->
+    <div style="display:flex;flex-direction:column;gap:5px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95)">Gestión de Activos</span>
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <span style="font-family:var(--fd);font-size:14px;font-weight:800;color:var(--gold)">~$15B</span>
+          <span style="font-size:9px;color:var(--gold);background:var(--gold2);padding:1px 6px">62%</span>
+        </div>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:1px"><div class="rev-bar" data-w="62" style="height:100%;background:var(--gold);border-radius:1px;width:0%;transition:width 1.3s cubic-bezier(.16,1,.3,1)"></div></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:2px">
+        <div style="background:var(--s2);padding:6px 8px"><div style="font-size:8px;color:var(--w30);letter-spacing:.09em">Gestión activa</div><div style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95);margin-top:2px">~$6.2B</div><div style="font-size:7px;color:var(--w30)">≈25% del total</div></div>
+        <div style="background:var(--s2);padding:6px 8px"><div style="font-size:8px;color:var(--w30);letter-spacing:.09em">Gestión indexada</div><div style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95);margin-top:2px">~$5.8B</div><div style="font-size:7px;color:var(--w30)">≈24% del total</div></div>
+        <div style="background:var(--s2);padding:6px 8px"><div style="font-size:8px;color:var(--w30);letter-spacing:.09em">Multi-activo / otro</div><div style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95);margin-top:2px">~$3.0B</div><div style="font-size:7px;color:var(--w30)">≈13% del total</div></div>
+      </div>
+    </div>
+
+    <!-- iShares -->
+    <div style="display:flex;flex-direction:column;gap:5px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95)">iShares (fees sobre ETFs)</span>
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <span style="font-family:var(--fd);font-size:14px;font-weight:800;color:var(--cyan)">~$4.4B</span>
+          <span style="font-size:9px;color:var(--cyan);background:var(--cyan2);padding:1px 6px">18%</span>
+        </div>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:1px"><div class="rev-bar" data-w="18" style="height:100%;background:var(--cyan);border-radius:1px;width:0%;transition:width 1.3s cubic-bezier(.16,1,.3,1)"></div></div>
+      <div style="font-size:8px;color:var(--w30);line-height:1.6">Fee medio ~0.08% sobre $5.5T AUM · Entradas récord $527B 2025 · 32% cuota global ETF · Ratio coste/beneficio imbatible</div>
+    </div>
+
+    <!-- Aladdin -->
+    <div style="display:flex;flex-direction:column;gap:5px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95)">Aladdin SaaS</span>
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <span style="font-family:var(--fd);font-size:14px;font-weight:800;color:#a78bfa">$1.6B+</span>
+          <span style="font-size:9px;color:#a78bfa;background:var(--pur2);padding:1px 6px">7%</span>
+        </div>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:1px"><div class="rev-bar" data-w="7" style="height:100%;background:#8b5cf6;border-radius:1px;width:0%;transition:width 1.3s cubic-bezier(.16,1,.3,1)"></div></div>
+      <div style="font-size:8px;color:var(--w30);line-height:1.6">+16% YoY · Margen bruto estimado &gt;70% · NRR &gt;100% · 1.500+ instituciones · Ingresos 100% recurrentes · Preqin añade $60M+/trimestre</div>
+    </div>
+
+    <!-- Privados -->
+    <div style="display:flex;flex-direction:column;gap:5px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95)">Mercados Privados</span>
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <span style="font-family:var(--fd);font-size:14px;font-weight:800;color:#e08080">~$1.9B</span>
+          <span style="font-size:9px;color:#e08080;background:var(--red2);padding:1px 6px">8%</span>
+        </div>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:1px"><div class="rev-bar" data-w="8" style="height:100%;background:#e06060;border-radius:1px;width:0%;transition:width 1.3s cubic-bezier(.16,1,.3,1)"></div></div>
+      <div style="font-size:8px;color:var(--w30);line-height:1.6">Segmento de mayor crecimiento · Fees base +performance fees · GIP + HPS multiplican el AUM privado · Expansión +15% YoY · Mayor margen por dólar gestionado</div>
+    </div>
+
+    <!-- Advisory -->
+    <div style="display:flex;flex-direction:column;gap:5px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span style="font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w95)">Advisory + Otros</span>
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <span style="font-family:var(--fd);font-size:14px;font-weight:800;color:var(--w55)">~$1.3B</span>
+          <span style="font-size:9px;color:var(--w55);background:var(--border);padding:1px 6px">5%</span>
+        </div>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:1px"><div class="rev-bar" data-w="5" style="height:100%;background:rgba(240,240,240,.3);border-radius:1px;width:0%;transition:width 1.3s cubic-bezier(.16,1,.3,1)"></div></div>
+      <div style="font-size:8px;color:var(--w30);line-height:1.6">Asesoría estratégica a gobiernos, bancos centrales y soberanos · Valor intangible superior al económico · Genera dependencia sistémica de largo plazo</div>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 2: Margin analysis + AUM vs Revenue efficiency + Growth rates -->
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px" class="rv">
+
+  <!-- Márgenes por segmento -->
+  <div style="background:var(--surf);padding:20px 18px">
+    <div style="font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Margen estimado por línea</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+          <span style="font-size:9px;color:var(--w80)">Aladdin SaaS</span>
+          <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:#a78bfa">&gt;70%</span>
+        </div>
+        <div style="height:5px;background:var(--border)"><div class="rev-bar" data-w="70" style="height:100%;background:#8b5cf6;width:0%;transition:width 1.2s .1s cubic-bezier(.16,1,.3,1)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+          <span style="font-size:9px;color:var(--w80)">Mercados Privados</span>
+          <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:#e08080">~55%</span>
+        </div>
+        <div style="height:5px;background:var(--border)"><div class="rev-bar" data-w="55" style="height:100%;background:#e06060;width:0%;transition:width 1.2s .2s cubic-bezier(.16,1,.3,1)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+          <span style="font-size:9px;color:var(--w80)">iShares ETFs</span>
+          <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:var(--cyan)">~50%</span>
+        </div>
+        <div style="height:5px;background:var(--border)"><div class="rev-bar" data-w="50" style="height:100%;background:var(--cyan);width:0%;transition:width 1.2s .3s cubic-bezier(.16,1,.3,1)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+          <span style="font-size:9px;color:var(--w80)">Gestión Activa</span>
+          <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:var(--gold)">~40%</span>
+        </div>
+        <div style="height:5px;background:var(--border)"><div class="rev-bar" data-w="40" style="height:100%;background:var(--gold);width:0%;transition:width 1.2s .4s cubic-bezier(.16,1,.3,1)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+          <span style="font-size:9px;color:var(--w80)">Margen operativo total</span>
+          <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:var(--w95)">45%</span>
+        </div>
+        <div style="height:5px;background:var(--border)"><div class="rev-bar" data-w="45" style="height:100%;background:var(--w30);width:0%;transition:width 1.2s .5s cubic-bezier(.16,1,.3,1)"></div></div>
+      </div>
+      <div style="margin-top:6px;padding:8px 10px;background:var(--s2);border-left:2px solid var(--gold)">
+        <div style="font-size:8px;color:var(--w55);line-height:1.7">Aladdin genera el mayor margen por $ de ingreso del negocio. Solo representa el 7% de los ingresos pero es el activo estratégico de mayor valor.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Eficiencia AUM vs ingresos -->
+  <div style="background:var(--surf);padding:20px 18px">
+    <div style="font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Eficiencia: ingresos por $1T gestionado</div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="background:var(--s2);padding:12px 14px;border-left:2px solid var(--gold)">
+        <div style="font-size:7px;letter-spacing:.1em;color:var(--w30);margin-bottom:4px">Gestión de activos líquidos</div>
+        <div style="font-family:var(--fd);font-weight:800;font-size:18px;color:var(--gold)">~$1.1B</div>
+        <div style="font-size:7px;color:var(--w30);margin-top:2px">por cada $1T en AUM</div>
+      </div>
+      <div style="background:var(--s2);padding:12px 14px;border-left:2px solid #8b5cf6">
+        <div style="font-size:7px;letter-spacing:.1em;color:var(--w30);margin-bottom:4px">Aladdin (por $1T procesado)</div>
+        <div style="font-family:var(--fd);font-weight:800;font-size:18px;color:#a78bfa">~$76M</div>
+        <div style="font-size:7px;color:var(--w30);margin-top:2px">por cada $1T en activos externos</div>
+      </div>
+      <div style="background:var(--s2);padding:12px 14px;border-left:2px solid #e06060">
+        <div style="font-size:7px;letter-spacing:.1em;color:var(--w30);margin-bottom:4px">Mercados privados</div>
+        <div style="font-family:var(--fd);font-weight:800;font-size:18px;color:#e08080">~$8.6B</div>
+        <div style="font-size:7px;color:var(--w30);margin-top:2px">por cada $1T en AUM privado</div>
+      </div>
+      <div style="padding:8px 10px;background:var(--gold2);border:1px solid rgba(201,168,76,.25)">
+        <div style="font-size:8px;color:var(--w80);line-height:1.7">Los mercados privados generan <span style="color:var(--gold);font-weight:700">8× más ingresos</span> por $1T gestionado que los activos líquidos. Ahí está la lógica de GIP + HPS.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crecimiento YoY por segmento -->
+  <div style="background:var(--surf);padding:20px 18px">
+    <div style="font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Crecimiento YoY por línea · 2024→2025</div>
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:8px;color:var(--w80);min-width:110px">Mercados Privados</span>
+        <div style="flex:1;height:5px;background:var(--border)"><div class="rev-bar" data-w="75" style="height:100%;background:#e06060;width:0%;transition:width 1.2s cubic-bezier(.16,1,.3,1)"></div></div>
+        <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:#e08080;min-width:36px">+15%</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:8px;color:var(--w80);min-width:110px">Aladdin SaaS</span>
+        <div style="flex:1;height:5px;background:var(--border)"><div class="rev-bar" data-w="80" style="height:100%;background:#8b5cf6;width:0%;transition:width 1.2s .1s cubic-bezier(.16,1,.3,1)"></div></div>
+        <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:#a78bfa;min-width:36px">+16%</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:8px;color:var(--w80);min-width:110px">iShares</span>
+        <div style="flex:1;height:5px;background:var(--border)"><div class="rev-bar" data-w="55" style="height:100%;background:var(--cyan);width:0%;transition:width 1.2s .2s cubic-bezier(.16,1,.3,1)"></div></div>
+        <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:var(--cyan);min-width:36px">+11%</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:8px;color:var(--w80);min-width:110px">Gestión Activa</span>
+        <div style="flex:1;height:5px;background:var(--border)"><div class="rev-bar" data-w="42" style="height:100%;background:var(--gold);width:0%;transition:width 1.2s .3s cubic-bezier(.16,1,.3,1)"></div></div>
+        <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:var(--gold);min-width:36px">+8%</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:8px;color:var(--w80);min-width:110px">Total empresa</span>
+        <div style="flex:1;height:5px;background:var(--border)"><div class="rev-bar" data-w="95" style="height:100%;background:var(--w55);width:0%;transition:width 1.2s .4s cubic-bezier(.16,1,.3,1)"></div></div>
+        <span style="font-family:var(--fd);font-size:10px;font-weight:800;color:var(--w95);min-width:36px">+19%</span>
+      </div>
+
+      <div style="border-top:1px solid var(--border);padding-top:10px;margin-top:4px">
+        <div style="font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Cuotas de mercado externas · 2025</div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;justify-content:space-between"><span style="font-size:8px;color:var(--w55)">Mercado global ETFs</span><span style="font-family:var(--fd);font-size:9px;font-weight:800;color:var(--gold)">32%</span></div>
+          <div style="display:flex;justify-content:space-between"><span style="font-size:8px;color:var(--w55)">Gestión activos global</span><span style="font-family:var(--fd);font-size:9px;font-weight:800;color:var(--gold)">~6%</span></div>
+          <div style="display:flex;justify-content:space-between"><span style="font-size:8px;color:var(--w55)">Riesgo tech institucional</span><span style="font-family:var(--fd);font-size:9px;font-weight:800;color:#a78bfa">~35%</span></div>
+          <div style="display:flex;justify-content:space-between"><span style="font-size:8px;color:var(--w55)">Infraestructura privada</span><span style="font-family:var(--fd);font-size:9px;font-weight:800;color:#e08080">~8%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 09 · STP + BRANDING ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">09</span><span class="sh-title">Segmentación · Targeting · Posicionamiento</span><div class="sh-rule"></div><span class="sh-sub">Estrategia de marketing y branding</span></div>
+<div class="stp-grid rv">
+  <div class="stp-card">
+    <div class="stp-hd">
+      <div class="stp-letter s">S</div>
+      <div class="stp-word"><div class="stp-word-main">Segmentación</div><div class="stp-word-sub">¿A quién se dirige?</div></div>
+    </div>
+    <div class="stp-items">
+      <div class="stp-item hl"><div class="stp-item-head">Inversores institucionales</div><div class="stp-item-body">Fondos de pensiones, aseguradoras, fondos soberanos, endowments. Tickets mínimos de decenas de millones.</div></div>
+      <div class="stp-item"><div class="stp-item-head">Gestores de patrimonio</div><div class="stp-item-body">Family offices, private banks, wealth managers. Acceso vía iShares y soluciones multi-activo.</div></div>
+      <div class="stp-item"><div class="stp-item-head">Inversores retail</div><div class="stp-item-body">A través de iShares ETFs. Democratización del acceso a mercados globales con costes mínimos.</div></div>
+      <div class="stp-item"><div class="stp-item-head">Gobiernos y bancos centrales</div><div class="stp-item-body">Vía Financial Markets Advisory. Segmento de altísimo valor estratégico y simbólico.</div></div>
+    </div>
+  </div>
+  <div class="stp-card">
+    <div class="stp-hd">
+      <div class="stp-letter t1">T</div>
+      <div class="stp-word"><div class="stp-word-main">Targeting</div><div class="stp-word-sub">¿Cómo los alcanza?</div></div>
+    </div>
+    <div class="stp-items">
+      <div class="stp-item hl"><div class="stp-item-head">No vende — se integra</div><div class="stp-item-body">Aladdin no es un producto externo. Se convierte en el sistema operativo del cliente. Coste de sustitución: años y miles de millones.</div></div>
+      <div class="stp-item"><div class="stp-item-head">Cartas anuales de Fink</div><div class="stp-item-body">Publicadas desde 2015. Dirigidas a CEOs del Fortune 500. Posicionan a BlackRock como árbitro del capitalismo responsable.</div></div>
+      <div class="stp-item"><div class="stp-item-head">Presencia en 70 oficinas</div><div class="stp-item-body">Cobertura local en 30+ países. Equipos dedicados por segmento y geografía. Relación de largo plazo garantizada.</div></div>
+      <div class="stp-item"><div class="stp-item-head">ETFs como puerta de entrada</div><div class="stp-item-body">iShares como producto de adquisición masiva. Una vez dentro del ecosistema, el cliente sube en la cadena de valor.</div></div>
+    </div>
+  </div>
+  <div class="stp-card">
+    <div class="stp-hd">
+      <div class="stp-letter p">P</div>
+      <div class="stp-word"><div class="stp-word-main">Posicionamiento</div><div class="stp-word-sub">¿Cómo se percibe?</div></div>
+    </div>
+    <div class="stp-items">
+      <div class="stp-item hl"><div class="stp-item-head">"No somos una gestora"</div><div class="stp-item-body">BlackRock se posiciona como infraestructura financiera global, no como un competidor en gestión de activos.</div></div>
+      <div class="stp-item"><div class="stp-item-head">El gestor del riesgo sistémico</div><div class="stp-item-body">Único actor capaz de ver y procesar el riesgo del sistema financiero completo en tiempo real.</div></div>
+      <div class="stp-item"><div class="stp-item-head">Socio estratégico de largo plazo</div><div class="stp-item-body">No vende productos: construye dependencia estructural. NRR de Aladdin superior al 100% sistemáticamente.</div></div>
+      <div class="stp-item"><div class="stp-item-head">Autoridad moral en ESG</div><div class="stp-item-body">Las cartas de Fink establecen la agenda corporativa global. BlackRock ejerce poder blando sobre el capitalismo moderno.</div></div>
+    </div>
+  </div>
+</div>
+<div class="brand-row rv">
+  <div class="brand-item" style="border-top-color:var(--gold)"><span class="brand-ico">🏛️</span><div class="brand-name">Marca Institucional</div><div class="brand-desc">Presencia austera, precisa, sin ruido. Identidad visual Bloomberg-terminal. Confianza por sobriedad.</div></div>
+  <div class="brand-item"><span class="brand-ico">✉️</span><div class="brand-name">Thought Leadership</div><div class="brand-desc">Cartas anuales de Fink como producto editorial. BlackRock Investment Institute. Research propietario distribuido globalmente.</div></div>
+  <div class="brand-item"><span class="brand-ico">🔗</span><div class="brand-name">Ecosistema Cautivo</div><div class="brand-desc">Una vez un cliente usa Aladdin, no puede irse. La marca se convierte en dependencia operacional irreemplazable.</div></div>
+  <div class="brand-item"><span class="brand-ico">🌍</span><div class="brand-name">Presencia Soberana</div><div class="brand-desc">Asesor de la FED, BCE, gobiernos europeos. La marca trasciende lo corporativo y entra en la esfera del poder estatal.</div></div>
+</div>
+
+<!-- ══ 09 · ARQUITECTURA ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">10</span><span class="sh-title">Arquitectura del Sistema</span><div class="sh-rule"></div><span class="sh-sub">5 capas funcionales interconectadas</span></div>
+<div class="arch-layers rv">
+  <div class="al"><div class="al-l"><span class="al-ln">Capa 1</span><div class="al-lt">Decisión</div></div><div class="al-c"><span class="al-tag">Aladdin</span><span class="al-tag">Risk Analytics</span><span class="al-tag">Factor Models</span><span class="al-tag">Portfolio Construction</span><span class="al-tag">Stress Testing</span><span class="al-tag">250M+ cálculos/sem.</span></div></div>
+  <div class="al"><div class="al-l"><span class="al-ln">Capa 2</span><div class="al-lt">Producto</div></div><div class="al-c"><span class="al-tag">iShares ETFs</span><span class="al-tag">Fondos Activos</span><span class="al-tag">Infraestructura GIP</span><span class="al-tag">Private Credit HPS</span><span class="al-tag">Real Assets</span><span class="al-tag">Multi-Asset</span></div></div>
+  <div class="al"><div class="al-l"><span class="al-ln">Capa 3</span><div class="al-lt">Distribución</div></div><div class="al-c"><span class="al-tag">Institucional</span><span class="al-tag">Retail Global</span><span class="al-tag">Wealth Management</span><span class="al-tag">Soberano</span><span class="al-tag">Aseguradoras</span><span class="al-tag">Pensiones</span></div></div>
+  <div class="al"><div class="al-l"><span class="al-ln">Capa 4</span><div class="al-lt">Datos</div></div><div class="al-c"><span class="al-tag">Preqin</span><span class="al-tag">Aladdin Data</span><span class="al-tag">Market Intelligence</span><span class="al-tag">ESG Metrics</span><span class="al-tag">eFront</span><span class="al-tag">Flow Analytics</span></div></div>
+  <div class="al"><div class="al-l" style="border-right-color:var(--gold)"><span class="al-ln">Capa 5</span><div class="al-lt" style="color:var(--gold)">Advisory</div></div><div class="al-c" style="border-top:1px solid var(--gold2)"><span class="al-tag">Gobiernos</span><span class="al-tag">Bancos Centrales</span><span class="al-tag">Fondos Soberanos</span><span class="al-tag">Restructuraciones</span><span class="al-tag">Policy Advisory</span></div></div>
+</div>
+
+<!-- ══ 10 · CLIENTES + MAPA ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">11</span><span class="sh-title">Clientes · Social Proof · Presencia Global</span><div class="sh-rule"></div></div>
+<div class="clients-layout rv">
+  <div class="clients-table">
+    <span class="clients-title">Clientes institucionales por categoría</span>
+    <div class="clients-grid">
+      <div class="cg-item"><div class="cg-cat">Fondos Soberanos</div><div class="cg-names">Abu Dhabi ICD · GIC Singapore · Norges Bank · ADIA · KIA</div></div>
+      <div class="cg-item"><div class="cg-cat">Fondos de Pensiones</div><div class="cg-names">CalPERS · CPPIB · ATP · OTPP · APG · CDPQ</div></div>
+      <div class="cg-item"><div class="cg-cat">Bancos Globales</div><div class="cg-names">Deutsche Bank · HSBC · Goldman Sachs · Morgan Stanley · BNP</div></div>
+      <div class="cg-item"><div class="cg-cat">Aseguradoras</div><div class="cg-names">Allianz · AXA · MetLife · Prudential · Zurich</div></div>
+      <div class="cg-item"><div class="cg-cat">Bancos Centrales</div><div class="cg-names">FED (mandatos) · BCE · Bank of Canada · RBA</div></div>
+      <div class="cg-item"><div class="cg-cat">Endowments / Foundations</div><div class="cg-names">Harvard · Yale · Ford Foundation · Gates Foundation</div></div>
+    </div>
+    <div class="clients-proof">
+      <div class="clients-proof-n">+1.500</div>
+      <div class="clients-proof-l">Instituciones usando Aladdin · 100+ países · $21T procesados</div>
+    </div>
+  </div>
+  <div class="map-panel">
+    <span class="map-title">Presencia global por región · Oficinas y AUM estimado</span>
+    <div class="region-bars">
+      <div class="rb"><span class="rb-name">América del Norte</span><div class="rb-track"><div class="rb-fill" data-w="90" style="width:0%"></div></div><span class="rb-val">$8.1T</span></div>
+      <div class="rb"><span class="rb-name">Europa (EMEA)</span><div class="rb-track"><div class="rb-fill" data-w="55" style="width:0%"></div></div><span class="rb-val">$3.2T</span></div>
+      <div class="rb"><span class="rb-name">Asia-Pacífico</span><div class="rb-track"><div class="rb-fill" data-w="25" style="width:0%"></div></div><span class="rb-val">$1.8T</span></div>
+      <div class="rb"><span class="rb-name">Latam + Resto</span><div class="rb-track"><div class="rb-fill" data-w="12" style="width:0%"></div></div><span class="rb-val">$0.9T</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px">
+      <div style="background:var(--s2);padding:10px 12px;border-left:2px solid var(--gold2)"><div style="font-family:var(--fd);font-weight:800;font-size:18px;color:var(--w95)">70</div><div style="font-size:7px;letter-spacing:.1em;color:var(--w30)">Oficinas globales</div></div>
+      <div style="background:var(--s2);padding:10px 12px;border-left:2px solid var(--gold2)"><div style="font-family:var(--fd);font-weight:800;font-size:18px;color:var(--w95)">30+</div><div style="font-size:7px;letter-spacing:.1em;color:var(--w30)">Países</div></div>
+      <div style="background:var(--s2);padding:10px 12px;border-left:2px solid var(--gold2)"><div style="font-family:var(--fd);font-weight:800;font-size:18px;color:var(--w95)">100+</div><div style="font-size:7px;letter-spacing:.1em;color:var(--w30)">Mercados Aladdin</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 11 · NOTICIAS ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">12</span><span class="sh-title">Movimientos Estratégicos Recientes</span><div class="sh-rule"></div><span class="sh-sub">El sistema en movimiento · 2023–2025</span></div>
+<div class="news-layout rv">
+  <div class="news-main">
+    <span class="nm-date">Enero 2025 · Movimiento estratégico más importante del año</span>
+    <div class="nm-title">BlackRock adquiere HPS Investment Partners — crea el mayor jugador de crédito privado del mundo</div>
+    <div class="nm-body">La adquisición de HPS añade aproximadamente $220B en activos de crédito privado a la plataforma de BlackRock. Junto con la compra de GIP (Global Infrastructure Partners, $12.5B) completada en 2024, BlackRock ha ejecutado la expansión más ambiciosa de su historia: la conquista sistemática de los mercados privados.<br><br>La señal es inequívoca: el capital institucional se mueve hacia activos ilíquidos de mayor rendimiento, y BlackRock ha decidido ser la única puerta de entrada. Con estas adquisiciones, se posiciona simultáneamente como el mayor gestor de activos líquidos, el mayor proveedor de infraestructura privada y el mayor prestamista institucional de crédito privado del mundo.</div>
+  </div>
+  <div class="news-side">
+    <div class="ni"><div class="ni-date">Enero 2024</div><div class="ni-title">iShares Bitcoin Trust (IBIT) — lanzamiento del mayor ETF de Bitcoin del mundo</div><span class="ni-tag t">Innovación</span></div>
+    <div class="ni"><div class="ni-date">Octubre 2024</div><div class="ni-title">Cierre adquisición GIP por $12.5B — entrada definitiva en infraestructura global</div><span class="ni-tag m">M&amp;A</span></div>
+    <div class="ni"><div class="ni-date">2024</div><div class="ni-title">Preqin integrada en Aladdin — BlackRock como dueño de los datos del mercado privado</div><span class="ni-tag m">Datos</span></div>
+    <div class="ni"><div class="ni-date">Q4 2025</div><div class="ni-title">$14T AUM récord · $698B entradas netas · $24.2B ingresos — triple all-time high</div><span class="ni-tag t">Resultados</span></div>
+    <div class="ni"><div class="ni-date">2025</div><div class="ni-title">Carta anual de Fink: "La infraestructura es la nueva renta fija" — reposicionamiento estratégico</div><span class="ni-tag s">Thought Leadership</span></div>
+  </div>
+</div>
+
+<!-- ══ 12 · ORGANIGRAMA ══ -->
+<div class="sh rv" style="margin-top:48px"><span class="sh-num">13</span><span class="sh-title">Liderazgo — Los Arquitectos del Sistema</span><div class="sh-rule"></div></div>
+<div class="org-wrap rv" style="gap:0">
+  <div class="org-row">
+    <div class="ocard ceo" style="min-width:170px"><div class="ocav">👤</div><div class="ocn">Larry Fink</div><div class="ocr">Chairman &amp; CEO · Cofundador</div></div>
+  </div>
+  <div class="org-conn"></div>
+  <div class="org-row">
+    <div class="ocard"><div class="ocav">👤</div><div class="ocn">Robert Kapito</div><div class="ocr">Presidente · Cofundador</div></div>
+    <div class="ocard"><div class="ocav">👤</div><div class="ocn">Martin Small</div><div class="ocr">CFO</div></div>
+    <div class="ocard"><div class="ocav">👤</div><div class="ocn">Rob Goldstein</div><div class="ocr">COO</div></div>
+    <div class="ocard"><div class="ocav">👤</div><div class="ocn">Mark Wiedman</div><div class="ocr">Global Client Business</div></div>
+    <div class="ocard"><div class="ocav">👤</div><div class="ocn">Gary Shedlin</div><div class="ocr">Senior Advisor</div></div>
+  </div>
+  <div class="org-conn"></div>
+  <div class="org-row" style="flex-wrap:wrap;gap:4px">
+    <div class="ocard" style="min-width:100px"><div class="ocav">📊</div><div class="ocn" style="font-size:8px">iShares</div><div class="ocr">Salim Ramji</div></div>
+    <div class="ocard" style="min-width:100px"><div class="ocav">🧠</div><div class="ocn" style="font-size:8px">Aladdin</div><div class="ocr">Sudhir Nair</div></div>
+    <div class="ocard" style="min-width:100px"><div class="ocav">🏗️</div><div class="ocn" style="font-size:8px">Mercados Privados</div><div class="ocr">Edwin Conway</div></div>
+    <div class="ocard" style="min-width:100px"><div class="ocav">🌍</div><div class="ocn" style="font-size:8px">EMEA</div><div class="ocr">Rachel Lord</div></div>
+    <div class="ocard" style="min-width:100px"><div class="ocav">🌏</div><div class="ocn" style="font-size:8px">APAC</div><div class="ocr">Susan Chan</div></div>
+    <div class="ocard" style="min-width:100px"><div class="ocav">🌎</div><div class="ocn" style="font-size:8px">Americas</div><div class="ocr">Mark McCombe</div></div>
+    <div class="ocard" style="min-width:100px"><div class="ocav">⚖️</div><div class="ocn" style="font-size:8px">Legal &amp; Risk</div><div class="ocr">Christopher Meade</div></div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="footer rv">
+  <div class="fl">Black<em>Rock</em> — El Sistema</div>
+  <div class="fr">Análisis Estratégico de Empresa · Grado ADE<br>IEB — Instituto de Estudios Bursátiles · Madrid · 2025<br>NYSE: BLK · $14T AUM · Fundada 1988 · Nueva York</div>
+</div>
+
+</div><!-- /page -->
+
+<script>
+// ── REVEAL ON SCROLL ──
+const rvEls = document.querySelectorAll('.rv');
+const io = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('show'), i * 40);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06 });
+rvEls.forEach(el => io.observe(el));
+
+// ── ANIMATE NEW REV-BARS (anatomy section) ──
+const revBarIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.rev-bar').forEach((b, i) => {
+        const w = b.dataset.w;
+        setTimeout(() => { b.style.width = w + '%'; }, i * 80);
+      });
+      revBarIO.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => {
+  if (el.querySelector('.rev-bar')) revBarIO.observe(el);
+});
+
+// ── ANIMATE DONUT ──
+const donutIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const segs = e.target.querySelectorAll('.donut-seg');
+      segs.forEach((seg, i) => {
+        const targetDash = parseFloat(seg.dataset.val || 0);
+        const offset     = parseFloat(seg.dataset.off || 0);
+        seg.style.strokeDasharray = `0 376.99`;
+        seg.style.transition = `stroke-dasharray 1s ${0.2 + i * 0.15}s cubic-bezier(.16,1,.3,1)`;
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            seg.style.strokeDasharray = `${targetDash} 376.99`;
+            seg.style.strokeDashoffset = offset;
+          }, 50);
+        });
+      });
+      donutIO.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('svg').forEach(svg => donutIO.observe(svg));
+function animateBars(container) {
+  container.querySelectorAll('[data-w]').forEach(b => {
+    const w = b.dataset.w;
+    b.style.width = '0%';
+    setTimeout(() => {
+      b.style.transition = 'width 1.3s cubic-bezier(.16,1,.3,1)';
+      b.style.width = w + '%';
+    }, 200);
+  });
+}
+const barIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { animateBars(e.target); barIO.unobserve(e.target); }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.macro4, .comp-bar-wrap, .clients-layout').forEach(el => barIO.observe(el));
+
+// ── AUM CHART ──
+const aumData = [
+  { yr:'1999', v:0.165 }, { yr:'2003', v:0.3 }, { yr:'2006', v:1.1 },
+  { yr:'2009', v:3.3 },   { yr:'2012', v:3.79 }, { yr:'2015', v:4.6 },
+  { yr:'2018', v:5.98 }, { yr:'2020', v:7.8 }, { yr:'2022', v:8.6 },
+  { yr:'2023', v:10.0 }, { yr:'2024', v:11.5 }, { yr:'2025', v:14.0 },
+];
+const maxV = 14;
+const container = document.getElementById('aum-bars');
+aumData.forEach(d => {
+  const wrap = document.createElement('div');
+  wrap.className = 'aum-bar-wrap';
+  const bar = document.createElement('div');
+  bar.className = 'aum-bar';
+  bar.style.height = '0px';
+  const targetH = Math.round((d.v / maxV) * 130);
+  const val = document.createElement('div');
+  val.className = 'aum-bar-val';
+  val.textContent = d.v >= 1 ? '$' + d.v + 'T' : '$' + Math.round(d.v * 1000) + 'B';
+  if (d.yr === '2025') { bar.style.background = 'rgba(201,168,76,.35)'; bar.style.borderTopColor = 'var(--gold)'; val.style.color = 'var(--gold)'; }
+  bar.appendChild(val);
+  const yr = document.createElement('div');
+  yr.className = 'aum-bar-yr';
+  yr.textContent = d.yr;
+  wrap.appendChild(bar);
+  wrap.appendChild(yr);
+  container.appendChild(wrap);
+  // animate on scroll
+  const aumIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => { bar.style.height = targetH + 'px'; }, 100 + aumData.indexOf(d) * 80);
+        aumIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  aumIO.observe(container);
+});
+</script>
+</body>
+</html>
